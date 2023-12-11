@@ -27,7 +27,6 @@ pinMode(A0, INPUT);
 pinMode(A1, INPUT);
 pinMode(A2, INPUT);
 pinMode(A3, INPUT);
-pinMode(A4, INPUT);
 Serial.begin(115200);
 servo_9.write(angulo);
 servo_10.write(angulo2);
@@ -57,7 +56,6 @@ void loop()
 	sensorValue2 = analogRead(A1);
 	sensorValue3 = analogRead(A2); 
 	sensorValue4 = analogRead(A3);
-	sensorValue5 = analogRead(A4);
 	//Sensor corrente e tensão
 	float shuntvoltage = 0; //tensão no shunt
 	float busvoltage = 0; //tensão no bus
@@ -113,4 +111,5 @@ void loop()
 	lcd_1.print("Corrente:");	
 	lcd_1.setCursor(11, 2);
 	lcd_1.print(current_mA);
-    }
+    
+}
